@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hotel_booking_ui/modules/login/forgot_password.dart';
+import 'package:flutter_hotel_booking_ui/modules/login/login_Screen.dart';
+import 'package:flutter_hotel_booking_ui/modules/login/sign_up_Screen.dart';
 import 'package:flutter_hotel_booking_ui/routes/routes.dart';
 
 class NavigationServices {
@@ -23,5 +26,17 @@ class NavigationServices {
   void gotoIntroductionScreen() {
     Navigator.pushNamedAndRemoveUntil(context, RoutesName.IntroductionScreen,
         (Route<dynamic> route) => false);
+  }
+
+  Future<dynamic> gotoLoginScreen() async {
+    return await _pushMaterialPageRoute(LoginScreen());
+  }
+
+  Future<dynamic> gotoForgotPasswordScreen() async {
+    return await _pushMaterialPageRoute(ForgotPasswordScreen());
+  }
+
+  Future<dynamic> gotoSignUpScreen() async {
+    return await _pushMaterialPageRoute(SignUpScreen());
   }
 }
