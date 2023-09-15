@@ -3,5 +3,5 @@ class RoutesName {
   static const String IntroductionScreen = '/introductionScreen';
   static const String Login = '/login';
   static const String Home = '/home';
-  static const String TabScreen = "/bottomTab/bottomTabScreen";
+  static const String BottomTabScreen = "/bottomTab/bottomTabScreen";
 }

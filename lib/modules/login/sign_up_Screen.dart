@@ -107,7 +107,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             EdgeInsets.only(left: 24, right: 24, bottom: 8),
                         buttonText: AppLocalizations(context).of("sign_up"),
                         onTap: () {
-                          if (allValidation()) Scaffold();
+                          if (allValidation())
+                            NavigationServices(context).gotoBottomTabScreen();
+                          ;
                         },
                       ),
                       Padding(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hotel_booking_ui/modules/bottomTab/bottomTabScreen.dart';
+import 'package:flutter_hotel_booking_ui/modules/hotel_detailes/search_screen.dart';
 import 'package:flutter_hotel_booking_ui/modules/login/forgot_password.dart';
 import 'package:flutter_hotel_booking_ui/modules/login/login_Screen.dart';
 import 'package:flutter_hotel_booking_ui/modules/login/sign_up_Screen.dart';
@@ -38,5 +40,13 @@ class NavigationServices {
 
   Future<dynamic> gotoSignUpScreen() async {
     return await _pushMaterialPageRoute(SignUpScreen());
+  }
+
+  Future<dynamic> gotoBottomTabScreen() async {
+    return await _pushMaterialPageRoute(BottomTabScreen());
+  }
+
+  Future<dynamic> gotoSearchScreen() async {
+    return await _pushMaterialPageRoute(SearchScreen());
   }
 }
