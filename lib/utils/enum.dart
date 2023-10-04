@@ -16,3 +16,6 @@ enum ColorType {
 
 enum LanguageType { en, fr, ar, ja }
 
+enum PopupTextStyle { no, ad, ch }
+
+enum TopBarType { Upcoming, Finished, Favorites }

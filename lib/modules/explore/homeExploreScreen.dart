@@ -178,7 +178,7 @@ class _HomeExploreScreenState extends State<HomeExploreScreen>
   Widget getDealListView(int index) {
     var hotelList = HotelListData.hotelList;
     List<Widget> list = [];
-    hotelList.forEach((element) {
+    hotelList.forEach((f) {
       var animation = Tween(begin: 0.0, end: 1.0).animate(
         CurvedAnimation(
           parent: widget.animationController,
@@ -188,9 +188,9 @@ class _HomeExploreScreenState extends State<HomeExploreScreen>
       list.add(
         HotelListViewPage(
           callback: () {
-            Scaffold();
+            NavigationServices(context).gotoHotelDetails(f);
           },
-          hotelData: element,
+          hotelData: f,
           animation: animation,
           animationController: widget.animationController,
         ),
@@ -254,7 +254,7 @@ class _HomeExploreScreenState extends State<HomeExploreScreen>
                   child: CommonButton(
                     onTap: () {
                       if (opecity != 0) {
-                        Scaffold();
+                        NavigationServices(context).gotoHotelHomeScreen();
                       }
                     },
                     buttonTextWidget: Padding(
